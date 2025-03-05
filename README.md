@@ -42,7 +42,7 @@ gcloud functions deploy email-notification --entry-point send_email --runtime py
 
 ## Use
 
-To send an email, make a POST request to the `/email-notification` endpoint with the following JSON body:
+To send an email, make a POST request to the `/` endpoint with the following JSON body:
 
 ```json
 {
