@@ -39,3 +39,14 @@ Using Cloud Functions
 ```bash
 gcloud functions deploy email-notification --entry-point send_email --runtime python39 --trigger-http --allow-unauthenticated --memory 256MB --region us-central1 --timeout 60 --min-instances 0 --max-instances 1 --cpu 1 --set-env-vars RESEND_API_KEY=your_resend_api_key
 ```
+
+## Use
+
+To send an email, make a POST request to the `/email-notification` endpoint with the following JSON body:
+
+```json
+{
+  "email": "your_email@example.com",
+  "message": "Hello, world!"
+}
+```
